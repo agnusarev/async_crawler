@@ -12,3 +12,7 @@ linting:
 .PHONY: mypy
 mypy:
 	poetry run mypy src
+
+.PHONY: run_crawler
+run_crawler:
+	poetry run python src/async_crawler/async_crawler.py

@@ -8,6 +8,9 @@ packages = [{include = "async_crawler", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
+beautifulsoup4 = "^4.12.3"
+aiohttp = "^3.10.10"
+aiofiles = "^24.1.0"
 
 
 [tool.poetry.group.dev.dependencies]
