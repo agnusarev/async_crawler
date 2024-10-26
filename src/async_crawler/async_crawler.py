@@ -1,6 +1,6 @@
 import asyncio
 import logging
-import os
+import aiofiles.os
 from pathlib import Path
 from typing import Dict, List
 
@@ -65,7 +65,7 @@ async def get_html(session: ClientSession, url: str) -> str:
 
 async def save_page(content: str, file_name: str) -> None:
     directory = SAVE_DIR / file_name
-    os.makedirs(directory, exist_ok=True)
+    await aiofiles.os.makedirs(directory, exist_ok=True)
     async with aiofiles.open(
         directory / f"{file_name}.html", "w+", encoding="utf-8"
     ) as f:
